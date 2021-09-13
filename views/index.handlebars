@@ -1,15 +1,96 @@
-<h1>Counter Index</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <nav class="tags">
+                <ol>
+                    <li class="tag"><a href="#">Logout</a></li>
+                    <li class="tag"><a href="#">Checkout</a></li>
+                    <li class="tag"><a href="#">Place an order</a></li>
+
+                </ol>
+            </nav>
+        </div>
+
+        {{!-- below is the popup area for the checkout screen --}}
+        <form action="/pops" method="POST">
+            <div class="popup">
+                <h3>Shopping Cart</h3>
+                <p>
+                    Small {{small}}  <br>
+                    Medium {{medium}} <br>
+                    Large {{large}}  <br>
+                </p>
+                <p>
+                    Total Cost :ZAR
+                </p>
+                <button class="button-primary " on type="submit" name="order">Order
+
+            </div>
+
+        </form>
 
 
-<div>
-    Start here
+        <form action="/buy" method="POST">
+            <div class="pizzas">
+                <div class="pizzaOne">
+                    <div class="btn">
+                        <div>
+                            <h5>Large Pizza</h5>
+                            <h5>R87.99</h5>
+                            <img src="download.jpeg" alt="large pizza">
+                            <p>
+                                The perfect balance of pepperoni, Mozzarella cheese, and Grana Padano on a pizza</p>
+                        </div>
 
-    <form action="/count" method="post">
-        <div class="counter" >
-            {{counter}}
-        </div>    
-        <input type="submit" value="Press button to count">
-    
-    </form>
+                        <button class="button-primary "  on type="submit" name="pizzaType" value="large">Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="pizzaTwo">
+                    <div class="btn">
+                        <div>
+                            <h5>Medium Pizza</h5>
+                            <h5>R67.99</h5>
+                            <img src="download.jpeg" alt="large pizza">
 
-</div>
+                            <p>
+                                The perfect balance of pepperoni, Mozzarella cheese, and Grana Padano on a pizza</p>
+                        </div>
+                        <button class="button-primary "  on type="submit" name="pizzaType"  value="medium">Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="pizzaThree">
+                    <div class="btn">
+                        <div>
+                            <h5>Small Pizza</h5>
+                            <h5>R34.99</h5>
+
+                            <img src="pizza.jpeg" alt="large pizza">
+                            <p>
+                                The perfect balance of pepperoni, Mozzarella cheese, and Grana Padano on a pizza</p>
+                        </div>
+
+                        <button class="button-primary " on type="submit" name="pizzaType"  value="small">Buy
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
